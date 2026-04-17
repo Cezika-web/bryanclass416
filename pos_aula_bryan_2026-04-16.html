@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resumo Pós-Aula — Bryan — CZK English</title>
+
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=Vf7xfSmxc04l8AR_mtp5ql9xG6N2VYRXt3ufL_0O21xyKmQIhzVV8TkO1T3oI7CbX8_6t2OyqADvQ65G81BuhLSm-h0RTSMjAtHJtv2Cjar062LIsIaWj8Q3vHq4TaRp_Du6Sy0NJjj7L91CDwdWoIjLYFBU93U_q3fnzHeF7G4u4BtT9xZZLXVlPZGLkY3ehE2hl1TnlsBSXzhgRgQubP0a9PpwW1BB-h5CO5Gu45OtFHBAsNDF0WYaKeT_6zXwix3V-_70dv3ZQG3zjFlXXQ" charset="UTF-8"></script><style>
+    :root{
+      --page-bg: #f4f7fa;
+      --card-bg: #fff;
+      --accent: #2f86e6;
+      --accent-dark: #1f6fd1;
+      --green: #36b37e;
+      --muted: #6b7280;
+      --border: #e6eef8;
+      --box-radius: 12px;
+      --card-width: 720px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background:var(--page-bg);
+      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--card-width);
+      background:var(--card-bg);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 6px 22px rgba(33,47,60,0.06);
+      border:1px solid rgba(15,33,64,0.03);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:8px;
+    }
+
+    .badge{
+      background:linear-gradient(180deg,#fff,#f2fbff);
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--accent);
+      font-weight:700;
+      font-size:0.85rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.3rem;
+      color:#0f1724;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:0.92rem;
+      margin-top:6px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:10px;
+      border:none;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(47,134,230,0.12);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--accent);
+      border:1px solid var(--border);
+      box-shadow:none;
+    }
+
+    main{margin-top:18px;}
+    section{margin-top:18px;}
+
+    .panel{
+      background:#fbfdff;
+      border-radius:12px;
+      padding:16px;
+      border:1px solid var(--border);
+    }
+
+    .outline-card{
+      border-radius:10px;
+      border:1px solid var(--border);
+      padding:16px;
+      background:#fff;
+    }
+
+    /* Vocabulary boxes */
+    .vocab-grid{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .vocab{
+      flex:1;
+      min-width:220px;
+      border-radius:10px;
+      padding:14px;
+      border:2px solid #dfeefe;
+      background:#fff;
+    }
+
+    .vocab.green{
+      border-color:#c9f3dc;
+      background:#f5fff6;
+    }
+
+    .vocab h3{
+      margin:0;
+      font-size:1rem;
+      color:#154360;
+    }
+
+    .vocab p{
+      margin:8px 0 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    /* Transcrição / gravação buttons */
+    .media-row{
+      display:flex;
+      gap:14px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+
+    .media-btn{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:700;
+      color:var(--accent);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-width:200px;
+      justify-content:center;
+    }
+
+    /* Homework box */
+    .homework{
+      background:#f3fff6;
+      border:1px solid #d7f5df;
+      border-radius:10px;
+      padding:14px;
+      margin-top:10px;
+    }
+
+    /* ===== TALK TIME – TABELA RETANGULAR ===== */
+    .speaking{
+      margin-top:18px;
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border:1px solid var(--border);
+      max-width:640px;
+    }
+
+    .speaking h2{
+      margin:0 0 10px 0;
+      font-size:1.05rem;
+      color:#0f1724;
+    }
+
+    .talk-table{
+      width:100%;
+      border-collapse:collapse;
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #e1e9f5;
+      font-size:0.9rem;
+    }
+
+    .talk-table th,
+    .talk-table td{
+      padding:8px 10px;
+      text-align:left;
+    }
+
+    .talk-table th{
+      background:#eef4ff;
+      color:#1b3556;
+      font-weight:700;
+      border-bottom:1px solid #dde6fa;
+    }
+
+    .row-teacher{
+      background:#e7f2ff; /* azul clarinho */
+    }
+
+    .row-student{
+      background:#e8f7ef; /* verde clarinho */
+    }
+
+    .talk-label{
+      font-weight:700;
+    }
+
+    .talk-percent{
+      font-weight:700;
+      color:#0f1724;
+    }
+
+    .talk-time{
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:0.9rem;
+      text-align:center;
+    }
+
+    /* responsive */
+    @media (max-width:720px){
+      .card{padding:18px;border-radius:14px;}
+      .vocab-grid{flex-direction:column;}
+      .media-row{flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card" role="main">
+      <header>
+        <div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="badge">PÓS-AULA</span>
+            <h1>Eventos, convites e compreensão auditiva</h1>
+          </div>
+          <div class="meta" style="margin-top:8px;">
+            <strong>Professor:</strong> César &nbsp;•&nbsp;
+            <strong>Aluno:</strong> Bryan &nbsp;•&nbsp;
+            <strong>Data:</strong> 16/04/2026
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#" onclick="window.print();return false;">Imprimir / Salvar PDF</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel">
+          <p style="margin:0;font-weight:600;color:#08325a;">
+            Resumo da aula sobre convites, eventos, perguntas com date/time/place, sujeito e verbo, além de escuta com vídeo da unit 2.
+          </p>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Resumo da Aula</h2>
+          <div class="outline-card">
+            <p style="margin:0 0 8px 0;">
+              Nesta aula, retomamos a <strong>unit 2</strong> e revisamos o vocabulário de <strong>eventos</strong>, <strong>convites</strong>, <strong>data, hora e lugar</strong>. Para aquecer, criamos um cenário imaginário envolvendo um show da banda <em>Evanescence</em>, e você praticou respostas usando <em>date</em>, <em>time</em> e <em>place</em>, com frases como <em>on May 2nd</em>, <em>at night</em> e <em>at Morumbi</em>.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Depois, trabalhamos a ideia de <strong>convite</strong> com a estrutura <em>Would you like to go to...?</em>, além de reforçar como falar sobre um show ou evento específico. Também revisamos rapidamente <strong>subject</strong> e <strong>verb</strong>, identificando o sujeito e o verbo em sentenças simples. Nesse momento, reforçamos que formas do <strong>verbo be</strong> como <em>am, is, are, was, were</em> também são verbos.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Na parte principal, fizemos um exercício de <strong>listening</strong> com o vídeo da unit 2. O foco foi entender o contexto geral e identificar eventos como <em>a movie</em>, <em>a play</em>, <em>live music</em>, <em>heavy metal concert</em> e <em>jazz</em>. Você conseguiu perceber a ideia central do vídeo: a personagem sugere programas, e o Dusty reage de forma exagerada, imitando ou comentando cada opção de maneira engraçada.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Também revisamos a expressão <em>I’m in the mood for...</em>, entendendo que ela significa algo como <strong>“estou a fim de / estou no clima para”</strong>. Além disso, praticamos <strong>directions</strong> com frases como <em>Go two blocks to Grant Street</em> e <em>The bank is across</em>, além de observar melhor o uso de informações específicas no áudio.
+            </p>
+            <p style="margin:0;">
+              No final da aula, fizemos um jogo de <em>would you rather</em> para ampliar o vocabulário e estimular respostas espontâneas em inglês. Surgiram palavras novas e curiosas, como <em>kitten</em>, <em>puppy</em>, <em>runny nose</em>, <em>wet dog</em>, <em>fart</em>, <em>hungry sharks</em> e <em>butcher</em>. Foi uma aula com bastante revisão, percepção de progresso e mais segurança para entender contextos antes de tentar traduzir palavra por palavra.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Key Vocabulary</h2>
+          <div class="vocab-grid">
+            <div class="vocab">
+              <h3>In the mood for</h3>
+              <p style="margin-top:8px;font-size:0.92rem;color:var(--muted);">
+                <em>(pt) a fim de / no clima para</em><br>
+                <small>I’m in the mood for some live music.</small>
+              </p>
+            </div>
+            <div class="vocab green">
+              <h3>Would you like to go to...?</h3>
+              <p style="margin-top:8px;font-size:0.92rem;color:var(--muted);">
+                <em>(pt) você gostaria de ir para...?</em><br>
+                <small>Would you like to go to the concert?</small>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Vocabulário da aula</h2>
+          <div class="outline-card">
+            <h3 style="margin-top:0;">Eventos e convites</h3>
+            <ul>
+              <li><strong>concert</strong> – show / concerto</li>
+              <li><strong>movie</strong> – filme</li>
+              <li><strong>play</strong> – peça de teatro</li>
+              <li><strong>cultural event</strong> – evento cultural</li>
+              <li><strong>live music</strong> – música ao vivo</li>
+              <li><strong>heavy metal concert</strong> – show de heavy metal</li>
+              <li><strong>jazz</strong> – jazz</li>
+              <li><strong>classical music</strong> – música clássica</li>
+              <li><strong>show</strong> – show / apresentação</li>
+              <li><strong>Evanescence’s show</strong> – show do Evanescence</li>
+              <li><strong>would you like to go to...?</strong> – você gostaria de ir para...?</li>
+              <li><strong>go see</strong> – ir ver / assistir</li>
+            </ul>
+
+            <h3>Tempo, lugar e directions</h3>
+            <ul>
+              <li><strong>on May 2nd</strong> – em 2 de maio</li>
+              <li><strong>at night</strong> – à noite</li>
+              <li><strong>at Morumbi</strong> – no Morumbi</li>
+              <li><strong>where</strong> – onde</li>
+              <li><strong>when</strong> – quando</li>
+              <li><strong>what time</strong> – que horas</li>
+              <li><strong>go two blocks</strong> – vá dois quarteirões</li>
+              <li><strong>Grant Street</strong> – rua Grant</li>
+              <li><strong>the bank is across</strong> – o banco fica do outro lado / em frente</li>
+              <li><strong>take the train</strong> – pegue o trem</li>
+            </ul>
+
+            <h3>Gramática e organização da frase</h3>
+            <ul>
+              <li><strong>subject</strong> – sujeito</li>
+              <li><strong>verb</strong> – verbo</li>
+              <li><strong>verb be</strong> – verbo be</li>
+              <li><strong>am / is / are / was / were</strong> – formas do verbo be</li>
+              <li><strong>goes</strong> – vai (3ª pessoa do singular)</li>
+              <li><strong>went</strong> – foi / ia (passado de go)</li>
+            </ul>
+
+            <h3>Vocabulário do jogo final</h3>
+            <ul>
+              <li><strong>kitten</strong> – filhote de gato</li>
+              <li><strong>puppy</strong> – filhote de cachorro</li>
+              <li><strong>runny nose</strong> – nariz escorrendo</li>
+              <li><strong>wet dog</strong> – cachorro molhado</li>
+              <li><strong>fart</strong> – peido / peidar</li>
+              <li><strong>hungry sharks</strong> – tubarões famintos</li>
+              <li><strong>island</strong> – ilha</li>
+              <li><strong>butcher</strong> – açougueiro / cortar a carne do osso</li>
+              <li><strong>meat</strong> – carne</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Frases modelo da aula</h2>
+          <div class="outline-card">
+            <ul>
+              <li>On May 2nd.</li>
+              <li>At night.</li>
+              <li>At Morumbi.</li>
+              <li>Would you like to go to Evanescence’s show?</li>
+              <li>I’m in the mood for some live music.</li>
+              <li>What are you in the mood for?</li>
+              <li>Go two blocks to Grant Street.</li>
+              <li>The bank is across.</li>
+              <li>Dusty sees every movie on the first night.</li>
+              <li>Dusty goes to all the plays.</li>
+              <li>I go to all the plays.</li>
+              <li>You go to all the plays.</li>
+              <li>She goes to all the plays.</li>
+              <li>Dusty went to all the plays.</li>
+              <li>There is a heavy metal concert.</li>
+              <li>I’d rather...</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Correções importantes</h2>
+          <div class="outline-card">
+            <ul>
+              <li><strong>Date e ordinal numbers:</strong> revisamos que datas em inglês precisam da forma ordinal. O foco foi em estruturas como <em>on May 2nd</em>, além de lembrar formas como <em>first</em>, <em>second</em> e <em>third</em>.</li>
+              <li><strong>At night:</strong> quando você quis falar um horário mais geral da noite, a forma corrigida foi <em>at night</em>, em vez de usar <em>after night</em>.</li>
+              <li><strong>Go to:</strong> reforçamos que, para dizer <em>ir para</em>, a estrutura mais natural é <em>go to</em>. Ex.: <em>I go to all the plays.</em></li>
+              <li><strong>3ª pessoa do singular no presente:</strong> apareceu um ponto importante com <em>Dusty goes</em>. Quando usamos <em>he / she / it</em> ou um nome singular, o verbo precisa ser conjugado no presente simples. Ex.: <em>She goes</em>, <em>Dusty goes</em>.</li>
+              <li><strong>Goes vs. is:</strong> revisamos que nem toda frase no presente precisa do verbo <em>be</em>. Em frases com verbo de ação, como <em>go</em>, o correto é usar <em>go / goes</em>, não <em>is</em>.</li>
+              <li><strong>Architect x architecture:</strong> houve confusão entre as duas palavras. <em>Architect</em> pode ser nome / título do evento no vídeo, enquanto <em>architecture</em> é arquitetura, a área de estudo.</li>
+              <li><strong>Understanding the context first:</strong> um dos pontos mais importantes da aula foi não tentar traduzir tudo isoladamente. Primeiro, entender o que está acontecendo no vídeo. Depois, identificar as palavras e frases.</li>
+              <li><strong>In the mood for:</strong> a expressão não significa literalmente uma palavra só. O sentido mais natural trabalhado foi <em>estar a fim de</em> ou <em>estar no clima para</em>.</li>
+              <li><strong>Vocabulário do jogo:</strong> apareceram palavras novas com sentido bem específico, como <em>kitten</em>, <em>puppy</em>, <em>runny nose</em>, <em>wet dog</em>, <em>fart</em> e <em>butcher</em>. O foco foi entender o sentido geral e não decorar tudo de uma vez.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Transcrição &amp; Gravação</h2>
+          <div class="media-row">
+            <a class="media-btn" href="#" role="button">📄 Acessar transcrição</a>
+            <a
+              class="media-btn"
+              href="https://youtu.be/nyZgubvxtBs"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              style="background:linear-gradient(180deg,#1f6fd1,#2f86e6);color:#fff;border:none;min-width:260px;"
+            >
+              🎥 Assistir gravação (acesso privado)
+            </a>
+          </div>
+        </section>
+
+        <section class="speaking" aria-label="Distribuição de fala">
+          <h2>Tempo de Fala (Talk Time)</h2>
+          <table class="talk-table">
+            <thead>
+              <tr>
+                <th>Quem falou</th>
+                <th>Porcentagem</th>
+                <th>Duração aproximada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-teacher">
+                <td><span class="talk-label">César (Professor)</span></td>
+                <td><span class="talk-percent">72%</span></td>
+                <td class="talk-time">~36 minutos</td>
+              </tr>
+              <tr class="row-student">
+                <td><span class="talk-label">Bryan</span></td>
+                <td><span class="talk-percent">28%</span></td>
+                <td class="talk-time">~14 minutos</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Homework</h2>
+          <div class="homework">
+            <p style="margin:0 0 8px 0;">
+              📌 <strong>Lição de casa (como combinado em aula):</strong>
+            </p>
+            <ul style="margin:0 0 6px 18px;padding:0;font-size:0.94rem;color:var(--muted);">
+              <li>Lembrar de ler o pós-aula de 2 a 3x na semana.</li>
+            </ul>
+            <p style="margin:6px 0 0 0;">
+              <a
+                href="https://babadum.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn secondary"
+                style="padding:8px 12px;border-radius:8px;font-weight:700;"
+              >
+                🎮 Abrir tarefa de casa (Babadum)
+              </a>
+            </p>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn" href="https://wa.me" style="background:#25D366;border-radius:10px;box-shadow:none;">
+              💬 Falar comigo no WhatsApp
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <p style="margin:18px 0 0 0;color:var(--muted);font-size:0.9rem;">
+          © 2025 CZK English • Este conteúdo é exclusivo para fins educacionais. • Suporte: czkenglish@gmail.com
+        </p>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
